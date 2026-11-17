@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Адрес получателя (куда отправлять фото):"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etRecipient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="email получателя"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Почта отправителя:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etSenderEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ваш email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etSenderPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="пароль приложения (не пароль почты!)"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="SMTP-сервер (для Gmail оставить по умолчанию):" />
+
+        <EditText
+            android:id="@+id/etSmtpHost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="smtp.gmail.com" />
+
+        <EditText
+            android:id="@+id/etSmtpPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="587" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swAutoCapture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Автосъёмка при распознавании штрихкода" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Сохранить" />
+    </LinearLayout>
+</ScrollView>
